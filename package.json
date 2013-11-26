@@ -12,6 +12,7 @@
 		"grunt-notify":                "*",
 		"grunt-autoprefixer":          "*",
 		"grunt-contrib-cssmin":        "*",
+		"grunt-sync":				   "*",
 		"matchdep":                    "*"
 	}
 }

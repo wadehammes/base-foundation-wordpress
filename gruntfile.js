@@ -81,30 +81,28 @@ module.exports = function(grunt) {
                 ext: '.min.css'
             },
         },
-        //- Notify when task is complete
+        // Move images to theme that are used within templates (only needed in our CMS installs)
+        sync: {
+            main: {
+                files: [{
+                    cwd: 'templates/img',
+                    src: '**',
+                    dest: 'wordpress/wp-content/themes/base-bones/images/',
+                }]
+            }
+        },
+         //- Notify when task is complete
         notify: {
-            css_compile: {
-                options: {
-                    title: 'SASS',  // optional
-                    message: 'Compile was successful', //required
-                }
-            },
-            css_prefixed: {
-                options: {
-                    title: 'CSS AutoPrefixer',  // optional
-                    message: 'Prefix was successful', //required
-                }
-            },
             app_change: {
                 options: {
                     title: 'Javascript',  // optional
                     message: 'Concatenatated and minifed successfully', //required
                 }
             },
-            css_min: {
+            css_complete: {
                 options: {
-                    title: 'CSS Minified',  // optional
-                    message: 'Minifed successfully', //required
+                    title: 'SASS -> CSS',  // optional
+                    message: 'Compiled, prefixed, and moved successfully', //required
                 }
             },
         },
@@ -120,24 +118,25 @@ module.exports = function(grunt) {
             },
             css: {
                 files: ['wordpress/wp-content/themes/base-bones/*.css', 'css/*.css'],
-                tasks: ['notify:css_compile', 'css_prefixed', 'css_min']
-            },
-            prefix: {
-                files: ['wordpress/wp-content/themes/base-bones/*.css', 'templates/css/*.css'],
-                tasks: ['notify:css_min']
+                tasks: ['notify:css_complete', 'css_prefixed', 'css_min']
             },
             js: {
                 files: ['<%= concat.app.src %>', 'js/main.js'],
                 tasks: ['notify:app_change','app_change']                
+            },
+            sync: {
+                files: ['wordpress/wp-content/themes/base-bones/**', 'templates/img/**'],
+                tasks: ['sync_files']                
             }
         }
     });
     //- REGISTER ALL OUR GRUNT TASKS
     grunt.task.run('notify_hooks');
-    grunt.registerTask('default', ['autoprefixer','sass','cssmin', 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['autoprefixer','cssmin', 'concat', 'sass', 'sync', 'uglify', 'watch']);
     grunt.registerTask('app_change', ['concat:app', 'uglify:app', 'uglify:main']);
     grunt.registerTask('concat_change', ['uglify:app']);
     grunt.registerTask('sass_change', ['sass']);
     grunt.registerTask('css_prefixed', ['autoprefixer']);
     grunt.registerTask('css_min', ['cssmin']);
+    grunt.registerTask('sync_files', ['sync']);
 };
