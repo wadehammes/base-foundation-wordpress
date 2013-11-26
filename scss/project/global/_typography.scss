@@ -1,0 +1,59 @@
+// Typography
+body {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	color: $black;
+}
+
+//- HEADERS
+h1 {
+	font-weight: 800;
+}
+
+//- PARAGRAPH AND LINKS
+p {
+	font-weight: 200;
+}
+
+//- LISTS
+ul, ol {
+
+}
+
+ul {
+	list-style: none outside;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 30px;
+}
+
+ul {
+	&.square, &.circle, &.disc {
+		margin-left: 25px;
+	}
+	&.square {
+		list-style: square outside;
+	}
+	&.circle {
+		list-style: circle outside;
+	}
+	&.disc {
+		list-style: disc outside;
+	}
+	ul {
+		margin: 4px 0 5px 25px;
+	}
+}
+
+ol ol {
+	margin: 4px 0 5px 30px;
+}
+
+ul.large li {
+	line-height: 21px;
+}
+
+dl dt {
+	font-weight: bold;
+}

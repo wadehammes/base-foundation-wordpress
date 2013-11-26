@@ -1,0 +1,58 @@
+@media print {
+	* {
+		background: transparent !important;
+		color: black !important;
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+	}
+	body {
+		width: 100%;
+	}
+	/* Black prints faster: sanbeiji.com/archives/953 */
+	p a {
+		color: $body-font-color !important;
+		text-decoration: underline;
+		&:visited {
+			color: $body-font-color !important;
+			text-decoration: underline;
+		}
+		&[href]:after {
+			content: " (" attr(href) ")";
+		}
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	.ir a:after {
+		content: "";
+	}
+	a {
+		&[href^="javascript:"]:after, &[href^="#"]:after {
+			content: "";
+		}
+	}
+	/* Don't show links for images, or javascript/internal links */
+	pre, blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	thead {
+		display: table-header-group;
+	}
+	/* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img {
+		page-break-inside: avoid;
+	}
+	@page {
+		margin: 0.5cm;
+	}
+
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	h2, h3 {
+		page-break-after: avoid;
+	}
+}

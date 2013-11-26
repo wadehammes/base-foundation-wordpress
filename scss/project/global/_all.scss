@@ -1,0 +1,14 @@
+// STYLE GUIDE
+// Use this file for global classes, typography settings, and other tools that have multiple uses. Each piece of 
+// global content is a separate partial found within this directory. Comment or uncomment to use as necessary below.
+//
+// A good use for this file is working on a project that has a style guide, build the styles
+// out here so you can rinse and reuse throughout the project.
+
+@import "variables";
+@import "animations";
+@import "fontface";
+@import "typography";
+@import "forms";
+@import "buttons";
+@import "tools";

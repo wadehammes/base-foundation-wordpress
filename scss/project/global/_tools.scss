@@ -1,0 +1,39 @@
+// Other Global Tools
+html * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: $font-smoothing;
+    -webkit-text-size-adjust:none;
+}
+
+body {
+    -webkit-backface-visibility:(hidden); // Fixes Chrome 1px shift rendering issue on CSS3 transitions.
+}
+
+html, body {
+    height: 100%;
+}
+
+.fixed {
+    position: fixed;
+}
+
+// Tools
+////////////////////////////////////////////////////////
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+//- CLEARFIX FALLBACK - Use: <div class="clear"></div> after floated elements if clearfix class fails
+.clear {
+    clear: both;
+}

@@ -1,0 +1,26 @@
+// SCREEN STYLING
+
+// Please reference global/styles.scss for all global styles (i.e. if there is a style guide for your project, set the classes for each style there.)
+// global directory is a great place to store all reusable classes, use below to make style adjustments per object level
+
+// ICONS 
+// Sets up icons in the CSS for use in HTML.
+// For full list of names, see: styles/icons/_entypo.scss and disregard the beginning $entypo-
+html, body {
+	background: $white;
+}
+
+body {
+	background: $white;
+}
+
+div#main {
+    box-shadow: 1px 1px 1px $black;
+    display: flex;
+    border-radius: 2px;
+    column-count: 3;
+}
+
+div.test {
+    box-shadow: 1px $black;
+}

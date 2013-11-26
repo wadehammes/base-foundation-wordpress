@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store?
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.sass-cache
+*.sublime-*
+node_modules
+bower_components
+templates/css
+css
