@@ -119,11 +119,11 @@ module.exports = function(grunt) {
                 tasks: ['sass_change']
             },
             css: {
-                files: [/*'drupal/sites/all/themes/theme_name/css/*.css',*/ 'css/*.css'],
+                files: ['wordpress/wp-content/themes/base-bones/*.css', 'css/*.css'],
                 tasks: ['notify:css_compile', 'css_prefixed', 'css_min']
             },
             prefix: {
-                files: [/*'drupal/sites/all/themes/theme_name/css/*.css',*/ 'templates/css/*.css'],
+                files: ['wordpress/wp-content/themes/base-bones/*.css', 'templates/css/*.css'],
                 tasks: ['notify:css_min']
             },
             js: {
