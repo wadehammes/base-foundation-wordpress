@@ -45,6 +45,8 @@ Do your JS work in <code>js/</code> and all your styling within <code>scss/</cod
 
 ####CREDITS:
 Foundation - http://foundation.zurb.com
+
 Grunt - http://gruntjs.com
+
 Bones Theme - https://github.com/eddiemachado/bones
 
