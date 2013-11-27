@@ -38,6 +38,13 @@ Start building something awesome.
 - Use scss/project/media/screen.scss for screen styles
 - Use scss/project/media/print.scss for print styles
 
-The <code>templates/</code> directory is meant to be your static build folder. Your www root will be <code>wordpress/</code>, which is 3.7.1 as of this build. 
+Your www root will be <code>wordpress/</code>, which is 3.7.1 as of this build. You will want to push the contents of this folder to your web root, and run the config. If you need help with that, see the Wordpress Codex - <a href="http://codex.wordpress.org/Getting_Started_with_WordPress">http://codex.wordpress.org/Getting_Started_with_WordPress</a>
 
-Do your JS work in <code>js</code> and all your styling within <code>scss</code>. Grunt will handle the rest to ensure your templates have the necessary files.
+For development:
+Do your JS work in <code>js/</code> and all your styling within <code>scss/</code>. The <code>templates/</code> directory is meant to be your static build folder for HTML, and there is a Bones theme customized within the wordpress/wp-content/themes directory where you can create your Wordpress theme based off your static templates. Grunt will handle the rest to ensure your templates have the necessary files.
+
+####CREDITS:
+Foundation - http://foundation.zurb.com
+Grunt - http://gruntjs.com
+Bones Theme - https://github.com/eddiemachado/bones
+
