@@ -16,6 +16,7 @@ Then Bower:
 
 After that, install some other dependencies:
 <code>$ sudo gem install -g sass</code>
+<code>$ sudo gem install -g bourbon</code>
 
 Once you are ready to compile the project, download these files as a zip, decompress, and move them to your project directory. Then, in terminal:
 <code>$ cd your/project/directory</code>
@@ -28,6 +29,10 @@ Install the Bower dependencies into the project:
 
 Initiate Grunt:
 <code>$ grunt</code>
+
+In order to update Bower and Bourbon:
+<code>$ bourbon update</code>
+<code>$ bower update</code>
 
 Your project should compile, and you will recieve notifications of things changing.
 
@@ -49,4 +54,6 @@ Foundation - http://foundation.zurb.com
 Grunt - http://gruntjs.com
 
 Bones Theme - https://github.com/eddiemachado/bones
+
+Bourbon - http://bourbon.io
 
