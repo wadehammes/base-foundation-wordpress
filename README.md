@@ -1,6 +1,6 @@
-Base
+Base Foundation
 ======
-This base structure is what I think is the best starting point for development of static sites, templates, prototypes and more. It is a great beginners framework for learning <a href="http://sass-lang.com">SASS</a> and an even more excellent way to learn responsive design using the amazing mixin offered by <a href="http://compass-style.org">Compass</a> and Foundation. It sits on top of <a href="http://gruntjs.com/">Grunt</a>, a JS Task Runner, which is used to concatenate and minify all the Javascript and CSS, ass well as compiling the Compass/SASS. It takes a bit to set up Grunt, so see below for installation articles.
+Base Foundation is a template framework based on the <a href="http://foundation.zurb.com">Foundation</a> framework from Zurb, which utilizes <a href="http://sass-lang.com">SASS</a>, and is meant to be a starting point for a website build. It utilizes <a href="http://gruntjs.com/">Grunt</a>, which handles javascript tasks such as CSS minification and prefixing, SASS compilation, and JS concatenation and uglifying, folder syncing, and more.
 
 ####PRIOR TO USAGE:
 You will need to make sure you have the following installed to your machine (via Terminal):
@@ -19,21 +19,28 @@ After that, install some other dependencies:
 
 Once you are ready to compile the project, download these files as a zip, decompress, and move them to your project directory. Then, in terminal:
 <code>$ cd your/project/directory</code>
+
+Install the Node Modules into the project:
 <code>$ npm install</code>
+
+Install the Bower dependencies into the project:
 <code>$ bower install</code>
+
+Initiate Grunt:
 <code>$ grunt</code>
 
-This will start the grunt interface and your project should compile, and you will recieve notifications of things changing.
+Your project should compile, and you will recieve notifications of things changing.
 
 Start building something awesome.
 
 ####OTHER TIDBITS:
-- Use project/global for creating style guide classes and other reusuable, global elements.
-- Use project/media/screen.scss for screen styles
-- Use project/media/print.scss for print styles
+- Use scss/project/global for creating style guide classes and other reusuable, global elements.
+- Use scss/project/media/screen.scss for screen styles
+- Use scss/project/media/print.scss for print styles
 
-This template makes use of all Compass mixins (for full list and documentation see here: http://compass-style.org/)
-It's foundation is the Gumby Framework grid: http://gumbyframework.com/docs/grid/
+The <code>templates/</code> directory is meant to be your static build folder. Your www root will be <code>wordpress/</code>, which is 3.7.1 as of this build. 
+
+Do your JS work in <code>js</code> and all your styling within <code>scss</code>. Grunt will handle the rest to ensure your templates have the necessary files.
 
 ####RELEASE LOG:
 <a href="https://github.com/wadehammes/Base/releases">https://github.com/wadehammes/Base/releases</a>
