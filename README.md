@@ -1,4 +1,4 @@
-Base Foundation
+Base Foundation for Wordpress
 ======
 Base Foundation is a template framework based on the <a href="http://foundation.zurb.com">Foundation</a> framework from Zurb, which utilizes <a href="http://sass-lang.com">SASS</a>, and is meant to be a starting point for a website build. It utilizes <a href="http://gruntjs.com/">Grunt</a>, which handles javascript tasks such as CSS minification and prefixing, SASS compilation, and JS concatenation and uglifying, folder syncing, and more.
 
@@ -41,9 +41,3 @@ Start building something awesome.
 The <code>templates/</code> directory is meant to be your static build folder. Your www root will be <code>wordpress/</code>, which is 3.7.1 as of this build. 
 
 Do your JS work in <code>js</code> and all your styling within <code>scss</code>. Grunt will handle the rest to ensure your templates have the necessary files.
-
-####RELEASE LOG:
-<a href="https://github.com/wadehammes/Base/releases">https://github.com/wadehammes/Base/releases</a>
-
-####CONTRIBUTORS:
-Special thanks to <a href="http://ca.linkedin.com/pub/simon-sarrasin/7/5b8/b0b">Simon Sarrasin</a> for the Javascript architecture
