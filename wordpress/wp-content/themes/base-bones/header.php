@@ -56,6 +56,11 @@ if (is_page("home")) {
 		<meta property="og:site_name" content="<?php wp_title('')?>"/>
 		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 
+		<!-- SCRIPT -->
+		<script type="text/javascript">window.root = '/';</script>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.min.js"></script>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/html5shiv.js"></script>
+
 		<?php wp_head(); ?>
 
 	</head>
