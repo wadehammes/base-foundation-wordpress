@@ -21,10 +21,10 @@ if (have_posts()) : while (have_posts()) : the_post();
 
     $exampleLoop_html .= " 
         <li class='team-member row'>
-            <div class='two columns'>" .
+            <div class='large-2 columns'>" .
                 get_the_post_thumbnail($thisID)
             . "</div>
-            <div class'ten columns'>
+            <div class'large-10 columns'>
                 <h2>" . get_the_title() . ", " . $pMetaData['job_title'][0] . "</h2>
                 <p>" . get_the_excerpt() . "</p>
             </div>
@@ -41,7 +41,7 @@ endwhile; endif;
 
 				<div id="inner-content">
 
-						<div id="main" class="eight columns clearfix" role="main">
+						<div id="main" class="large-8 clearfix" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 								<ul>
