@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         concat: {
             plugins : {
                 src: [
-                    'js/_lib/**/*.js'
+                    'js/_lib/**/*.js', 'bower_component/foundation/js/foundation.js'
                 ],
                 dest: 'js/_lib.concat.js'
             },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
             main : {
                 files: {
                     'templates/js/main.min.js': ['js/main.js'],
-                    'wordpress/wp-content/themes/base-bones/js/main.min.js': ['_js/main.js']
+                    'wordpress/wp-content/themes/base-bones/js/main.min.js': ['js/main.js']
                 }
             }
         },
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
                 tasks: ['notify:css_complete', 'css_prefixed', 'css_min']
             },
             js: {
-                files: ['<%= concat.app.src %>', 'js/main.js'],
+                files: ['<%= concat.app.src %>','<%= concat.lib.src %>', 'js/main.js'],
                 tasks: ['notify:app_change','app_change']                
             },
             sync: {
