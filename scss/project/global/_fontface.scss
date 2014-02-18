@@ -19,18 +19,6 @@
 //    font-style: normal;
 //}
 
-// Set local icon font - directory in fonts
-$icons: entypo;
-@font-face {
-	font-family: '#{$icons}';
-	font-style: normal;
-	font-weight: 400;
-	src: url(../css/fonts/icons/#{$icons}.eot);
-	src: url('../css/fonts/icons/#{$icons}.eot?#iefix') format('ie9-skip-eot'),
-		 url('../css/fonts/icons/#{$icons}.woff') format('woff'),
-		 url('../css/fonts/icons/#{$icons}.ttf')  format('truetype');
-}
-
 
 //- Create font stacks using the template below, include them by using @include fontFamilyName(); in CSS
 //

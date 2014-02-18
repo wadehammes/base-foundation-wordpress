@@ -11,3 +11,8 @@
 * Even better, get a tech-debt story in which you can dedicate actual sprint time to it.
 **********************************************************************/
 
+// WP Admin Bar fix, for some reason it's changing to absolute at around 600px
+html #wpadminbar {
+    position: fixed !important;
+    top: 0;
+}

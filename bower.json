@@ -1,6 +1,7 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "Base Foundation",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "60fps-scroll": ""
   }
 }

@@ -14,35 +14,51 @@ module.exports = function(grunt) {
         concat: {
             plugins : {
                 src: [
-                    'js/_lib/**/*.js', 'bower_component/foundation/js/foundation.js'
+                    'js/_lib/**/*.js',
+                    'bowers_components/foundation/js/foundation.js'
                 ],
-                dest: 'js/_lib.concat.js'
+                dest : 
+                    'wordpress/wp-content/themes/base/library/js/_plugins.concat.js'
+                //dest: 'js/_lib.concat.js'
             },
             app : {
                 src: [
-                    'js/_src/**/*.js'
+                    'js/_config/*.js',
+                    'js/_utils/*.js',
+                    'js/_src/**/*.js',
+                    'js/_src/**/**/*.js'
+                    //'bower_components/foundation/js/foundation.min.js',
+                    //'bower_components/60fps-scroll/dist/60fps-scroll.js'
                 ],
-                dest: 'js/_app.concat.js'
-            },
+                dest : 
+                    'wordpress/wp-content/themes/base/library/js/_app.concat.js'
+                //dest: 'js/_app.concat.js'
+            }
         },
         //- Uglify concatenated and other JS files
         uglify: {
             plugins : {
                 files: {
                     'templates/js/plugins.min.js': ['<%= concat.plugins.dest %>'],
-                    'wordpress/wp-content/themes/base-bones/js/plugins.min.js': ['<%= concat.plugins.dest %>']
+                    'wordpress/wp-content/themes/base/library/js/plugins.min.js': ['<%= concat.plugins.dest %>']
                 }
             },
             app : {
                 files: {
                     'templates/js/app.min.js': ['<%= concat.app.dest %>'],
-                    'wordpress/wp-content/themes/base-bones/js/app.min.js': ['<%= concat.app.dest %>']
+                    'wordpress/wp-content/themes/base/library/js/app.min.js': ['<%= concat.app.dest %>']
                 }
             },
             main : {
                 files: {
                     'templates/js/main.min.js': ['js/main.js'],
-                    'wordpress/wp-content/themes/base-bones/js/main.min.js': ['js/main.js']
+                    'wordpress/wp-content/themes/base/library/js/main.min.js': ['js/main.js']
+                }
+            },
+            base : {
+                files: {
+                    'templates/js/base.min.js': ['js/base.js'],
+                    'wordpress/wp-content/themes/base/library/js/base.min.js': ['js/base.js']
                 }
             }
         },
@@ -57,8 +73,15 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'css/app-unprefixed.css': 'scss/style.scss',
-                    'css/ie.css': 'scss/ie.scss'
                 }        
+            },
+            ie: {
+               options: {
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    'wordpress/wp-content/themes/base/library/css/ie.min.css': 'scss/ie.scss',
+                } 
             }
         },
         // Prefix the CSS
@@ -77,7 +100,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'templates/css/',
                 src: ['*.css', '!*.min.css'],
-                dest: 'wordpress/wp-content/themes/base-bones/',
+                dest: 'wordpress/wp-content/themes/base/library/css/',
                 ext: '.min.css'
             },
         },
@@ -87,7 +110,7 @@ module.exports = function(grunt) {
                 files: [{
                     cwd: 'templates/img',
                     src: '**',
-                    dest: 'wordpress/wp-content/themes/base-bones/images/',
+                    dest: 'wordpress/wp-content/themes/base/library/images/',
                 }]
             }
         },
@@ -117,15 +140,15 @@ module.exports = function(grunt) {
                 tasks: ['sass_change']
             },
             css: {
-                files: ['wordpress/wp-content/themes/base-bones/*.css', 'css/*.css'],
+                files: ['wordpress/wp-content/themes/base/*.css', 'css/*.css'],
                 tasks: ['notify:css_complete', 'css_prefixed', 'css_min']
             },
             js: {
-                files: ['<%= concat.app.src %>','<%= concat.lib.src %>', 'js/main.js'],
+                files: ['<%= concat.app.src %>', '<%= concat.plugins.src %>', 'js/base.js', 'js/main.js'],
                 tasks: ['notify:app_change','app_change']                
             },
             sync: {
-                files: ['wordpress/wp-content/themes/base-bones/**', 'templates/img/**'],
+                files: ['wordpress/wp-content/themes/base/**', 'templates/img/**'],
                 tasks: ['sync_files']                
             }
         }
@@ -133,8 +156,8 @@ module.exports = function(grunt) {
     //- REGISTER ALL OUR GRUNT TASKS
     grunt.task.run('notify_hooks');
     grunt.registerTask('default', ['autoprefixer','cssmin', 'concat', 'sass', 'sync', 'uglify', 'watch']);
-    grunt.registerTask('app_change', ['concat:app', 'uglify:app', 'uglify:main']);
-    grunt.registerTask('concat_change', ['uglify:app']);
+    grunt.registerTask('app_change', ['concat:app', 'uglify:app', 'uglify:main', 'uglify:base']);
+    grunt.registerTask('concat_change', ['uglify:app', 'uglify:main']);
     grunt.registerTask('sass_change', ['sass']);
     grunt.registerTask('css_prefixed', ['autoprefixer']);
     grunt.registerTask('css_min', ['cssmin']);

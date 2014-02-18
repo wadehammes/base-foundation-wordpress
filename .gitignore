@@ -1,11 +1,66 @@
+# Ignore configuration files that may contain sensitive information
+wp-config.php
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+# *.sql (allowing .sql so that we can store backups of our database in Git
+*.sqlite
+
+# OS generated files #
+######################
 .DS_Store
 .DS_Store?
+._*
+.Spotlight-V100
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# SASS #
+######################
 *.sass-cache
-*.sublime-*
-node_modules
-bower_components
-templates/css
-css
+
+# JS #
+######################
+wordpress/wp-content/themes/base/library/js/app.min.js
+wordpress/wp-content/themes/base/library/js/main.min.js
+wordpress/wp-content/themes/base/library/js/plugins.min.js
+wordpress/wp-content/themes/base/library/js/base.min.js
+
+# CSS #
+######################
+wordpress/wp-content/themes/base/library/js/css/ie.min.css
+wordpress/wp-content/themes/base/library/js/css/print.min.css
+wordpress/wp-content/themes/base/library/js/css/app.min.css
+static/css/ie.css
+static/css/print.css
+static/css/app.css
+
+# REPO IGNORES #
+######################
+bower_components/
+bourbon/
+node_modules/
+sftp-config.json
+

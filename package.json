@@ -1,18 +1,19 @@
 {
-	"name": "base",
-	"version": "2.1.0",
-	"author": "Simon Sarrasin and Wade Hammes",
-	"devDependencies": {
-		"grunt":                  "~0.4.1",
-		"node-sass":                   "*",
-		"grunt-contrib-uglify":        "*",
-		"grunt-contrib-watch":         "*",
-		"grunt-contrib-concat":        "*",
-		"grunt-sass":                  "*",
-		"grunt-notify":                "*",
-		"grunt-autoprefixer":          "*",
-		"grunt-contrib-cssmin":        "*",
-		"grunt-sync":				   "*",
-		"matchdep":                    "*"
-	}
+  "name": "base",
+  "version": "2.1.0",
+  "author": "Simon Sarrasin and Wade Hammes",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "node-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-sass": "*",
+    "grunt-notify": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-sync": "*",
+    "matchdep": "*",
+    "grunt-contrib-copy": "*"
+  }
 }
