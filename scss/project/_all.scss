@@ -1,10 +1,15 @@
-//- Bourbon
+//- Bourbon (http://bourbon.io)
 @import "../../bourbon/bourbon";
 
-//- Foundation
+//- Foundation Local Settings
 @import "settings";
-@import "foundation";
+
+//- Foundation Bower Parts
+@import
+  "../../bower_components/foundation/scss/normalize.scss",
+  "../../bower_components/foundation/scss/foundation/functions",
+  "../../bower_components/foundation/scss/foundation/components/global",
+  "../../bower_components/foundation/scss/foundation/components/grid";
 
 //- Project
 @import "../project/global/all";
-

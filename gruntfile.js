@@ -55,12 +55,9 @@ module.exports = function(grunt) {
         },
         //- Compile SASS
         sass: {
-            options: {
-                includePaths: ['bower_components/foundation/scss']
-            },
             dist: {
                 options: {
-                    outputStyle: 'expanded'
+                  outputStyle: 'expanded',
                 },
                 files: {
                     'css/app-unprefixed.css': 'scss/style.scss',
@@ -68,7 +65,7 @@ module.exports = function(grunt) {
             },
             ie: {
                options: {
-                    outputStyle: 'compressed'
+                  outputStyle: 'expanded',
                 },
                 files: {
                     'wordpress/wp-content/themes/base/library/css/ie.min.css': 'scss/ie.scss',
