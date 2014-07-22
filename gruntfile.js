@@ -108,7 +108,7 @@ module.exports = function(grunt) {
             options: {
               jpegMini: false
             },
-            src: ['templates/img/', 'wp-content/uploads/**/']
+            src: ['templates/img/', 'wp-content/uploads/**/**/']
           }
         },
         //- Notify when task is complete
