@@ -17,22 +17,13 @@ module.exports = function(grunt) {
                     'js/_lib/**/*.js',
                     'bowers_components/foundation/js/foundation.js'
                 ],
-                dest : 
+                dest :
                     'wordpress/wp-content/themes/base/library/js/_plugins.concat.js'
-                //dest: 'js/_lib.concat.js'
             },
             app : {
-                src: [
-                    'js/_config/*.js',
-                    'js/_utils/*.js',
-                    'js/_src/**/*.js',
-                    'js/_src/**/**/*.js'
-                    //'bower_components/foundation/js/foundation.min.js',
-                    //'bower_components/60fps-scroll/dist/60fps-scroll.js'
-                ],
-                dest : 
+                src: ['js/_src/**/*.js'],
+                dest :
                     'wordpress/wp-content/themes/base/library/js/_app.concat.js'
-                //dest: 'js/_app.concat.js'
             }
         },
         //- Uglify concatenated and other JS files
@@ -73,7 +64,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'css/app-unprefixed.css': 'scss/style.scss',
-                }        
+                }
             },
             ie: {
                options: {
@@ -81,7 +72,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'wordpress/wp-content/themes/base/library/css/ie.min.css': 'scss/ie.scss',
-                } 
+                }
             }
         },
         // Prefix the CSS
@@ -114,7 +105,16 @@ module.exports = function(grunt) {
                 }]
             }
         },
-         //- Notify when task is complete
+        // Optimize all images
+        imageoptim: {
+          main: {
+            options: {
+              jpegMini: false
+            },
+            src: ['templates/img/', 'wp-content/uploads/**/']
+          }
+        },
+        //- Notify when task is complete
         notify: {
             app_change: {
                 options: {
@@ -128,12 +128,18 @@ module.exports = function(grunt) {
                     message: 'Compiled, prefixed, and moved successfully', //required
                 }
             },
+            images_complete: {
+                options: {
+                    title: 'Images optimized.',  // optional
+                    message: 'Images ran through ImageOptim succesfully', //required
+                }
+            }
         },
         //- Watchers
         watch: {
-            grunt: { 
+            grunt: {
                 files: ['gruntfile.js'],
-                tasks: ['default'], 
+                tasks: ['default'],
             },
             sass: {
                 files: ['scss/**/*.scss'],
@@ -145,21 +151,26 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['<%= concat.app.src %>', '<%= concat.plugins.src %>', 'js/base.js', 'js/main.js'],
-                tasks: ['notify:app_change','app_change']                
+                tasks: ['notify:app_change','app_change']
             },
             sync: {
                 files: ['wordpress/wp-content/themes/base/**', 'templates/img/**'],
-                tasks: ['sync_files']                
+                tasks: ['sync_files']
+            },
+            images: {
+                files: ['templates/img/**/', 'wp-content/uploads/**/'],
+                tasks: ['notify:images_complete', 'imageoptim']
             }
         }
     });
     //- REGISTER ALL OUR GRUNT TASKS
     grunt.task.run('notify_hooks');
-    grunt.registerTask('default', ['autoprefixer','cssmin', 'concat', 'sass', 'sync', 'uglify', 'watch']);
+    grunt.registerTask('default', ['autoprefixer','cssmin', 'concat', 'imageoptim', 'sass', 'sync', 'uglify', 'watch']);
     grunt.registerTask('app_change', ['concat:app', 'uglify:app', 'uglify:main', 'uglify:base']);
     grunt.registerTask('concat_change', ['uglify:app', 'uglify:main']);
     grunt.registerTask('sass_change', ['sass']);
     grunt.registerTask('css_prefixed', ['autoprefixer']);
     grunt.registerTask('css_min', ['cssmin']);
     grunt.registerTask('sync_files', ['sync']);
+    grunt.registerTask('images', ['imageoptim']);
 };

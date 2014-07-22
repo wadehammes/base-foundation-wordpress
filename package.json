@@ -1,7 +1,7 @@
 {
   "name": "base",
   "version": "2.1.0",
-  "author": "Simon Sarrasin and Wade Hammes",
+  "author": "Wade Hammes",
   "devDependencies": {
     "grunt": "~0.4.1",
     "node-sass": "*",
@@ -14,6 +14,7 @@
     "grunt-contrib-cssmin": "*",
     "grunt-sync": "*",
     "matchdep": "*",
-    "grunt-contrib-copy": "*"
+    "grunt-contrib-copy": "*",
+    "grunt-imageoptim": "*"
   }
 }

@@ -1,7 +1,6 @@
 {
   "name": "Base Foundation",
   "dependencies": {
-    "foundation": "zurb/bower-foundation",
-    "60fps-scroll": ""
+    "foundation": "zurb/bower-foundation"
   }
 }

@@ -1,4 +1,4 @@
-(function() { try {
+;(function() { try {
     //Define the plugin's name here
     var __name = 'template';
     //--
@@ -48,7 +48,7 @@
 } catch(e) { err(e);}
 })();
 
-(function() { try {
+;(function() { try {
 	//Define the plugin's name here
 	var __name = 'template';
 	//--

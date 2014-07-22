@@ -43,7 +43,7 @@
 
 	    <!-- SCRIPT -->
 	    <script type="text/javascript">window._root = '<?php echo get_template_directory_uri(); ?>/';</script>
-	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	    <!-- <script type="text/javascript" src="/wp-includes/js/jquery/jquery.js"></script> -->
 	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/vendor/modernizr.min.js?<?php echo rand(0,10000000);?>"></script>
 	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/base.min.js?<?php echo rand(0,10000000);?>"></script>
