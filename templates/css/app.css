@@ -1182,43 +1182,6 @@ select {
 
 /* ALL ANIMATIONS */
 /* Fontfaces */
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #000000; }
-
-h1 {
-  font-weight: 800; }
-
-p {
-  font-weight: 200; }
-
-ul {
-  list-style: none outside; }
-
-ol {
-  list-style: decimal;
-  margin-left: 30px; }
-
-ul.square, ul.circle, ul.disc {
-  margin-left: 25px; }
-ul.square {
-  list-style: square outside; }
-ul.circle {
-  list-style: circle outside; }
-ul.disc {
-  list-style: disc outside; }
-ul ul {
-  margin: 4px 0 5px 25px; }
-
-ol ol {
-  margin: 4px 0 5px 30px; }
-
-ul.large li {
-  line-height: 21px; }
-
-dl dt {
-  font-weight: bold; }
-
 html * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

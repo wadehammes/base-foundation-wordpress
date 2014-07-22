@@ -8,7 +8,7 @@
     //- Libraries
     var aLibs = {
         'modernizr' : js + 'vendor/modernizr.min.js',
-        'jquery'    : '/wp-includes/js/jquery/jquery.js'
+        //'jquery'      : '/wp-includes/js/jquery/jquery.js'
         //'plugins'     : js + 'plugins.min.js',
         //'app'         : js + 'app.min.js'
     };

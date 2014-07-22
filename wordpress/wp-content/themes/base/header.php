@@ -29,29 +29,29 @@
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
-  		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+  	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php wp_head(); ?>
 
-	    <!-- SOCIAL META -->
-	    <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?>"/>
-	    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/icons/fav64.png"/>
-	    <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
-	    <meta property="og:description" content="<?php bloginfo('content'); ?>" />
+    <!-- SOCIAL META -->
+    <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?>"/>
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/icons/fav64.png"/>
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+    <meta property="og:description" content="<?php bloginfo('content'); ?>" />
 
-	    <!-- TYPEKIT ACCOUNT -->
+    <!-- TYPEKIT ACCOUNT -->
 
-	    <!-- SCRIPT -->
-	    <script type="text/javascript">window._root = '<?php echo get_template_directory_uri(); ?>/';</script>
-	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	    <!-- <script type="text/javascript" src="/wp-includes/js/jquery/jquery.js"></script> -->
-	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/vendor/modernizr.min.js?<?php echo rand(0,10000000);?>"></script>
-	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/base.min.js?<?php echo rand(0,10000000);?>"></script>
-	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/plugins.min.js?<?php echo rand(0,10000000);?>"></script>
-	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/app.min.js?<?php echo rand(0,10000000);?>"></script>
-	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/main.min.js?<?php echo rand(0,10000000);?>"></script>
-	    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/vendor/html5shiv.js?<?php echo rand(0,10000000);?>"></script>
-		
+    <!-- SCRIPT -->
+    <script type="text/javascript">window._root = '<?php echo get_template_directory_uri(); ?>/';</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="/wp-includes/js/jquery/jquery.js"></script> -->
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/vendor/modernizr.min.js?<?php echo rand(0,10000000);?>"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/base.min.js?<?php echo rand(0,10000000);?>"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/plugins.min.js?<?php echo rand(0,10000000);?>"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/app.min.js?<?php echo rand(0,10000000);?>"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/main.min.js?<?php echo rand(0,10000000);?>"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/vendor/html5shiv.js?<?php echo rand(0,10000000);?>"></script>
+
 		<!-- drop Google Analytics Here -->
 
 		<!-- end analytics -->
@@ -61,16 +61,16 @@
 	<body <?php body_class(); ?>>
 
 		<nav id="mobile-nav" class="show-for-small-only columns">
-			<?php joints_main_nav(); ?>		
+			<?php joints_main_nav(); ?>
 		</nav>
-			
+
 		<div id="container">
 
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="row">
 					<div class="large-3 medium-3 columns">
-						
+
 					</div>
 					<nav id="desktop-nav" class="large-9 medium-9 hide-for-small-only columns">
 						<?php joints_main_nav(); ?>
@@ -79,6 +79,3 @@
 				</div> <!-- end #inner-header -->
 
 			</header> <!-- end header -->
-			
-
-			
