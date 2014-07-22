@@ -1,9 +1,13 @@
 {
   "name": "base",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "author": "Wade Hammes",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wadehammes/base-foundation-wordpress.git"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "*",
     "node-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
