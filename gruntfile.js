@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             plugins : {
                 src: [
                     'js/_lib/**/*.js',
-                    'bowers_components/foundation/js/foundation.js'
+                    //'bowers_components/foundation/js/foundation.js'
                 ],
                 dest :
                     'wordpress/wp-content/themes/base/library/js/_plugins.concat.js'
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
             options: {
               jpegMini: false
             },
-            src: ['templates/img/', 'wp-content/uploads/**/**/']
+            src: ['templates/img/', 'wordpress/wp-content/uploads/**/**/']
           }
         },
         //- Notify when task is complete
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
                 tasks: ['sync_files']
             },
             images: {
-                files: ['templates/img/**/', 'wp-content/uploads/**/'],
+                files: ['templates/img/**/', 'wordpress/wp-content/uploads/**/'],
                 tasks: ['notify:images_complete', 'imageoptim']
             }
         }
