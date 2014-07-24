@@ -1,11 +1,10 @@
 /******************************************************************
-Theme Name: PROJECT NAME
-Theme URI: Base (http://wadehammes.com/base/) built into Bones (http://www.themble.com/bones)
-Description: This site was built using the Base Framework built into the Bones theme.
-Author: Pappas Group
-Author URI: http://pappasgroup.com
-Version: 1.2
-Tags: flexible-width, translation-ready, microformats, rtl-language-support
+Theme Name: <PROJECT NAME>
+Theme URI: <THEME URL>
+Author: <YOUR NAME>
+Author URI: <PROJECT URL>
+Version: <VERSION>
+Tags: <TAGS>
 
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
@@ -340,19 +339,19 @@ meta.foundation-mq-small {
   width: 0em; }
 
 meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:lower-bound(40.063em, 64em))/";
+  font-family: "/only screen and (min-width:40.063em)/";
   width: 40.063em; }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:lower-bound(64.063em, 90em))/";
+  font-family: "/only screen and (min-width:64.063em)/";
   width: 64.063em; }
 
 meta.foundation-mq-xlarge {
-  font-family: "/only screen and (min-width:lower-bound(90.063em, 120em))/";
+  font-family: "/only screen and (min-width:90.063em)/";
   width: 90.063em; }
 
 meta.foundation-mq-xxlarge {
-  font-family: "/only screen and (min-width:lower-bound(120.063em, 99999999em))/";
+  font-family: "/only screen and (min-width:120.063em)/";
   width: 120.063em; }
 
 meta.foundation-data-attribute-namespace {
@@ -430,7 +429,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: rem-calc(1000); }
+  max-width: 62.5rem; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -647,7 +646,7 @@ select {
   .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
     float: right; } }
 
-@media only screen and (min-width:lower-bound(40.063em, 64em)) {
+@media only screen and (min-width:40.063em) {
   .medium-push-0 {
     position: relative;
     left: 0%;
@@ -914,7 +913,7 @@ select {
     right: 91.6666666667%;
     left: auto; } }
 
-@media only screen and (min-width:lower-bound(64.063em, 90em)) {
+@media only screen and (min-width:64.063em) {
   .large-push-0 {
     position: relative;
     left: 0%;
