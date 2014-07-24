@@ -43,21 +43,19 @@ Thumbs.db
 
 # JS #
 ######################
-js/_app.concat.js
-js/_lib.concat.js
-wordpress/wp-content/themes/base/library/js/app.min.js
-wordpress/wp-content/themes/base/library/js/main.min.js
-wordpress/wp-content/themes/base/library/js/plugins.min.js
-wordpress/wp-content/themes/base/library/js/base.min.js
+js/
+js/*.js
+wordpress/wp-content/themes/base/library/js/*.js
+wordpress/wp-content/themes/base/library/js/
 
 # CSS #
 ######################
-wordpress/wp-content/themes/base/library/js/css/ie.min.css
-wordpress/wp-content/themes/base/library/js/css/print.min.css
-wordpress/wp-content/themes/base/library/js/css/app.min.css
-static/css/ie.css
-static/css/print.css
-static/css/app.css
+css/
+css/*.css
+wordpress/wp-content/themes/base/library/js/css/
+wordpress/wp-content/themes/base/library/js/css/*.css
+templates/css/*.css
+templates/css/
 
 # REPO IGNORES #
 ######################
@@ -65,4 +63,3 @@ bower_components/
 bourbon/
 node_modules/
 sftp-config.json
-
