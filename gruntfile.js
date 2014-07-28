@@ -162,7 +162,7 @@ module.exports = function(grunt) {
     });
     //- REGISTER ALL OUR GRUNT TASKS
     grunt.task.run('notify_hooks');
-    grunt.registerTask('default', ['autoprefixer','cssmin', 'concat', 'imageoptim', 'sass', 'sync', 'uglify', 'watch']);
+    grunt.registerTask('default', ['sass', 'autoprefixer','cssmin', 'concat', 'uglify', 'imageoptim', 'sync', 'watch']);
     grunt.registerTask('app_change', ['concat:app', 'uglify:app', 'uglify:main', 'uglify:base']);
     grunt.registerTask('concat_change', ['uglify:app', 'uglify:main']);
     grunt.registerTask('sass_change', ['sass']);

@@ -43,8 +43,8 @@ Thumbs.db
 
 # JS #
 ######################
-js/
-js/*.js
+js/_app.concat.js
+js/_lib.concat.js
 wordpress/wp-content/themes/base/library/js/*.js
 wordpress/wp-content/themes/base/library/js/
 
