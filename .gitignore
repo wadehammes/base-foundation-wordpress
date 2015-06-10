@@ -43,19 +43,13 @@ Thumbs.db
 
 # JS #
 ######################
-js/_app.concat.js
-js/_lib.concat.js
 wordpress/wp-content/themes/base/library/js/*.js
 wordpress/wp-content/themes/base/library/js/
 
 # CSS #
 ######################
-css/
-css/*.css
 wordpress/wp-content/themes/base/library/js/css/
 wordpress/wp-content/themes/base/library/js/css/*.css
-templates/css/*.css
-templates/css/
 
 # REPO IGNORES #
 ######################
