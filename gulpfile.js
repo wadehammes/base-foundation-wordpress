@@ -19,31 +19,31 @@ var gulp = require('gulp'),
 var themeName = 'base';
 
 // Style Path
-var stylePathSrc = './wp-content/themes/' + themeName + '/assets/scss/**/*.scss';
-var stylePathDest = './wp-content/themes/' + themeName + '/library/css/';
+var stylePathSrc = './site/wp-content/themes/' + themeName + '/assets/scss/**/*.scss';
+var stylePathDest = './site/wp-content/themes/' + themeName + '/library/css/';
 
 // Script Path
-var scriptsPathSrc = ['./wp-content/themes/' + themeName + '/assets/js/_lib/**/*.js', './wp-content/themes/' + themeName + '/assets/js/_src/**/*.js', './wp-content/themes/' + themeName + '/assets/js/app.js'];
-var scriptsPathWatch = './wp-content/themes/' + themeName + '/assets/js/**/*.js';
-var scriptsPathDest = './wp-content/themes/' + themeName + '/library/js/';
+var scriptsPathSrc = ['./site/wp-content/themes/' + themeName + '/assets/js/_lib/**/*.js', './site/wp-content/themes/' + themeName + '/assets/js/_src/**/*.js', './site/wp-content/themes/' + themeName + '/assets/js/app.js'];
+var scriptsPathWatch = './site/wp-content/themes/' + themeName + '/assets/js/**/*.js';
+var scriptsPathDest = './site/wp-content/themes/' + themeName + '/library/js/';
 
 // Sprites Path
-var svgPathWatch = './wp-content/themes/' + themeName + '/assets/svg/*.svg';
-var svgDest = './wp-content/themes/' + themeName + '/library/svg';
+var svgPathWatch = './site/wp-content/themes/' + themeName + '/assets/svg/*.svg';
+var svgDest = './site/wp-content/themes/' + themeName + '/library/svg';
 
 // Image Path
-var imgPathWatch = './wp-content/themes/' + themeName + '/assets/img/*';
-var imgDest = './wp-content/themes/' + themeName + '/library/img';
+var imgPathWatch = './site/wp-content/themes/' + themeName + '/assets/img/*';
+var imgDest = './site/wp-content/themes/' + themeName + '/library/img';
 
 // PHP Paths
-var phpPath = './wp-content/themes/' + themeName + '/**/*.php';
+var phpPath = './site/wp-content/themes/' + themeName + '/**/*.php';
 
 // Copy all files from Bower we need
 gulp.task('copy', function() {
   gulp.src([
     /* add bower src files here */
     ])
-  .pipe(gulp.dest('./wp-content/themes/' + themeName + '/assets/js/_lib/'));
+  .pipe(gulp.dest('./site/wp-content/themes/' + themeName + '/assets/js/_lib/'));
   });
 
 // Compile, prefix, minify and move our SCSS files
@@ -64,9 +64,9 @@ gulp.task('sass', function() {
 // Compile (in order), concatenate, minify, rename and move our JS files
 gulp.task('scripts', function() {
   return streamqueue({ objectMode: true },
-    gulp.src('./wp-content/themes/' + themeName + '/assets/js/_lib/**/*.js'),
-    gulp.src('./wp-content/themes/' + themeName + '/assets/js/_src/**/*.js'),
-    gulp.src('./wp-content/themes/' + themeName + '/assets/js/app.js')
+    gulp.src('./site/wp-content/themes/' + themeName + '/assets/js/_lib/**/*.js'),
+    gulp.src('./site/wp-content/themes/' + themeName + '/assets/js/_src/**/*.js'),
+    gulp.src('./site/wp-content/themes/' + themeName + '/assets/js/app.js')
     )
   .pipe(plumber())
   .pipe(concat('app.js', {newLine: ';'}))
