@@ -1,19 +1,19 @@
 @charset "utf-8";
 
 //- Bourbon (http://bourbon.io)
-@import "../../bourbon/bourbon";
+@import "../../../../../../bourbon/bourbon";
 
 //- Foundation Functions
-@import "../../bower_components/foundation/scss/foundation/functions";
+@import "../../../../../../bower_components/foundation/scss/foundation/functions";
 
 //- Foundation Local Settings
 @import "settings";
 
 //- Foundation Bower Parts
 @import
-  "../../bower_components/foundation/scss/normalize.scss",
-  "../../bower_components/foundation/scss/foundation/components/global",
-  "../../bower_components/foundation/scss/foundation/components/grid";
+  "../../../../../../bower_components/foundation/scss/normalize.scss",
+  "../../../../../../bower_components/foundation/scss/foundation/components/global",
+  "../../../../../../bower_components/foundation/scss/foundation/components/grid";
 
 //- Project
 @import "../project/global/all";
