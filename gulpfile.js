@@ -1,21 +1,28 @@
-/* DEPENDENCIES */
-var gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
-  minifyCSS = require('gulp-minify-css'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  rename = require('gulp-rename'),
-  svgmin = require('gulp-svgmin'),
-  imagemin = require('gulp-imagemin'),
-  livereload = require('gulp-livereload'),
-  notify = require("gulp-notify"),
-  util = require('gulp-util'),
-  watch = require('gulp-watch'),
-  streamqueue  = require('streamqueue'),
-  plumber = require('gulp-plumber');
+/*=========================================
+=            Gulp Dependencies            =
+=========================================*/
+var gulp     = require('gulp'),
+sass         = require('gulp-sass'),
+autoprefixer = require('gulp-autoprefixer'),
+minifyCSS    = require('gulp-minify-css'),
+concat       = require('gulp-concat'),
+uglify       = require('gulp-uglify'),
+rename       = require('gulp-rename'),
+svgmin       = require('gulp-svgmin'),
+imagemin     = require('gulp-imagemin'),
+livereload   = require('gulp-livereload'),
+notify       = require("gulp-notify"),
+util         = require('gulp-util'),
+watch        = require('gulp-watch'),
+streamqueue  = require('streamqueue'),
+plumber      = require('gulp-plumber'),
+shell        = require('gulp-shell'),
+jshint       = require('gulp-jshint'),
+gzip         = require('gulp-gzip');
 
-/* PATHS */
+/*==================================
+=            Base Paths            =
+==================================*/
 var themeBase = './site/wp-content/themes/';
 var themeName = 'base';
 
@@ -39,13 +46,15 @@ var imgDest = themeBase + themeName + '/library/img';
 // PHP Paths
 var phpPath = themeBase + themeName + '/**/*.php';
 
-// Copy all files from Bower we need
+/*=============================
+=            Tasks            =
+=============================*/
 gulp.task('copy', function() {
   gulp.src([
     /* add bower src files here */
     ])
   .pipe(gulp.dest(themeBase + themeName + '/assets/js/_lib/'));
-  });
+});
 
 // Compile, prefix, minify and move our SCSS files
 gulp.task('sass', function() {
@@ -55,12 +64,15 @@ gulp.task('sass', function() {
     style: 'expanded',
     errLogToConsole: true
     }))
-  .pipe(autoprefixer('last 2 versions', 'opera 12.1', 'ios 6', 'android 4'))
+  .pipe(autoprefixer('last 5 versions', 'opera 12.1', 'ios 6', 'android 4'))
   .pipe(minifyCSS())
+  .pipe(rename({suffix: '.min'}))
+  .pipe(gulp.dest(stylePathDest))
+  .pipe(gzip(gzip_options))
   .pipe(gulp.dest(stylePathDest))
   .pipe(livereload({start: true}))
   .pipe(notify({ message: 'Styles task complete' }));
-  });
+});
 
 // Compile (in order), concatenate, minify, rename and move our JS files
 gulp.task('scripts', function() {
@@ -70,13 +82,15 @@ gulp.task('scripts', function() {
     gulp.src(themeBase + themeName + '/assets/js/app.js')
     )
   .pipe(plumber())
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'))
   .pipe(concat('app.js', {newLine: ';'}))
   .pipe(uglify())
-  .pipe(rename('app.min.js'))
+  .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest(scriptsPathDest))
   .pipe(livereload({start: true}))
   .pipe(notify({ message: 'Scripts task complete' }));
-  });
+});
 
 // Optimize images
 gulp.task('img-opt', function () {
@@ -86,7 +100,7 @@ gulp.task('img-opt', function () {
     }))
   .pipe(gulp.dest(imgDest))
   .pipe(notify({ message: 'Images task complete' }));
-  });
+});
 
 // Optimize our SVGS
 gulp.task('svg-opt', function () {
@@ -106,7 +120,7 @@ gulp.task('svg-opt', function () {
     }))
   .pipe(gulp.dest(svgDest))
   .pipe(notify({ message: 'SVG task complete' }));
-  });
+});
 
 // Watch for any task changes
 gulp.task('watch', function() {
@@ -114,14 +128,14 @@ gulp.task('watch', function() {
 
   gulp.watch(phpPath).on('change', function(file) {
     livereload.changed(file.path);
-    util.log(util.colors.blue('PHP file changed' + ' (' + file.path + ')'));
+    util.log(util.colors.blue('PHP file changed:' + ' (' + file.path + ')'));
     });
 
   gulp.watch(stylePathSrc, ['sass']);
   gulp.watch(scriptsPathWatch, ['scripts']);
   gulp.watch(svgPathWatch, ['svg-opt']);
   gulp.watch(imgPathWatch, ['img-opt']);
-  });
+});
 
 /* RUN */
 gulp.task('default', ['copy', 'sass', 'scripts', 'watch']);
