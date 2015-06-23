@@ -20,6 +20,17 @@ shell        = require('gulp-shell'),
 jshint       = require('gulp-jshint'),
 gzip         = require('gulp-gzip');
 
+/*===============================
+=            Options            =
+===============================*/
+// GZIP
+var gzip_options = {
+    threshold: '1kb',
+    gzipOptions: {
+        level: 9
+    }
+};
+
 /*==================================
 =            Base Paths            =
 ==================================*/
