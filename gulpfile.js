@@ -25,10 +25,10 @@ gzip         = require('gulp-gzip');
 ===============================*/
 // GZIP
 var gzip_options = {
-    threshold: '1kb',
-    gzipOptions: {
-        level: 9
-    }
+  threshold: '1kb',
+  gzipOptions: {
+    level: 9
+  }
 };
 
 /*==================================
