@@ -11,8 +11,8 @@ rename       = require('gulp-rename'),
 svgmin       = require('gulp-svgmin'),
 imagemin     = require('gulp-imagemin'),
 livereload   = require('gulp-livereload'),
-notify       = require("gulp-notify"),
-util         = require('gulp-util'),
+notify       = require('gulp-notify'),
+utility      = require('gulp-util'),
 watch        = require('gulp-watch'),
 streamqueue  = require('streamqueue'),
 plumber      = require('gulp-plumber'),
@@ -139,7 +139,7 @@ gulp.task('watch', function() {
 
   gulp.watch(phpPath).on('change', function(file) {
     livereload.changed(file.path);
-    util.log(util.colors.blue('PHP file changed:' + ' (' + file.path + ')'));
+    utility.log(utility.colors.blue('PHP file changed:' + ' (' + file.path + ')'));
     });
 
   gulp.watch(stylePathSrc, ['sass']);
