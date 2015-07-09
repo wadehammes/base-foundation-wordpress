@@ -11,7 +11,7 @@ function joints_scripts_and_styles() {
     wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', array(), '2.1.4', true );
 
     // Adding scripts file in the footer
-    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/library/js/min/app.min.js', array( 'jquery' ), '', true );
+    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/library/js/app.min.js', array( 'jquery' ), '', true );
 
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
