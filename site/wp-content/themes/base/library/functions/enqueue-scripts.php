@@ -7,6 +7,9 @@ function joints_scripts_and_styles() {
   	// Removes WP version of jQuery
   	wp_deregister_script('jquery');
 
+    // Loads jQuery from CDNJS
+    wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', array(), '2.1.4', true );
+
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/library/js/min/app.min.js', array( 'jquery' ), '', true );
 

@@ -19,6 +19,21 @@
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+    <!-- RSS -->
+    <link rel="feed" type="application/atom+xml" href="<?php bloginfo('atom_url'); ?>" title="Atom Feed">
+    <link rel="feed" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="RSS Feed">
+
+    <!-- DETECT SMART BROWSERS -->
+    <script type="text/javascript" defer="defer">
+      /*=============================================
+      =            Detect Smart Browsers            =
+      =============================================*/
+      if ('visibilityState' in document) {
+        var doc = document.getElementsByTagName("html");
+        doc[0].className = 'modern-browser';
+      }
+    </script>
+
     <?php wp_head(); ?>
 
     <!-- TYPEKIT ACCOUNT -->
