@@ -13,6 +13,12 @@ function joints_scripts_and_styles() {
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
 
+    // Register Foundation icons
+    // wp_enqueue_style( 'foundation-icons', get_stylesheet_directory_uri() . '/library/icons/foundation-icons.css', array(), '', 'all' );
+
+    // Register Entypo icons
+    wp_enqueue_style( 'entypo-icons', get_stylesheet_directory_uri() . '/library/icons/entypo.css', array(), '', 'all' );
+
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
       wp_enqueue_script( 'comment-reply' );

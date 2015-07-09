@@ -1,4 +1,3 @@
-<?php error_reporting(0); ?>
 <!--[if lt IE 7 ]><html<?php language_attributes(); ?> class="ie6"><![endif]-->
 <!--[if (IE 7)&!(IEMobile) ]><html <?php language_attributes(); ?> class="ie7"><![endif]-->
 <!--[if (IE 8)&!(IEMobile) ]><html <?php language_attributes(); ?> class="ie8"><![endif]-->
@@ -39,11 +38,11 @@
 		</nav>
     <!-- End Mobile Nav -->
 
-		<div class="site-container">
+		<div class="site site--container">
 
-			<header class="header header--site" role="banner">
+			<header class="header <?php if(is_front_page()) { echo 'header--blog'; } ?>" role="banner">
         <?php joints_main_nav(); ?>
 			</header>
       <!-- End Header -->
 
-      <main class="site" role="application">
+      <main class="content" role="application">
