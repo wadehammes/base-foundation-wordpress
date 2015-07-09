@@ -4,22 +4,22 @@
 <!--[if (IE 9)&!(IEMobile) ]><html <?php language_attributes(); ?> class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <html>
-	<head>
-		<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
+  <head>
+    <title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
 
-		<!-- GOOGLE -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- GOOGLE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<!-- MOBILE -->
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- MOBILE -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<!-- FAVICON -->
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-  	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <!-- FAVICON -->
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<?php wp_head(); ?>
+    <?php wp_head(); ?>
 
     <!-- TYPEKIT ACCOUNT -->
 
@@ -27,22 +27,22 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 
-		<!-- GA -->
+    <!-- GA -->
 
-	</head>
+  </head>
 
-	<body <?php body_class(); ?>>
+  <body <?php body_class(); ?>>
 
-		<nav class="navigation navigation--mobile navigation--off-canvas">
-			<?php joints_main_nav(); ?>
-		</nav>
+    <nav class="navigation navigation--mobile navigation--off-canvas">
+      <?php joints_off_canvas(); ?>
+    </nav>
     <!-- End Mobile Nav -->
 
-		<div class="site site--container">
+    <div class="site site--container">
 
-			<header class="header <?php if(is_front_page()) { echo 'header--blog'; } ?>" role="banner">
-        <?php joints_main_nav(); ?>
-			</header>
+      <header class="header <?php if(is_front_page()) { echo 'header--blog'; } ?>" role="banner">
+        <?php joints_top_nav(); ?>
+      </header>
       <!-- End Header -->
 
       <main class="content" role="application">
