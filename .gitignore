@@ -1,6 +1,9 @@
 # Ignore configuration files that may contain sensitive information
 wp-config.php
 
+# Ignore site cache
+site/wp-content/cache/
+
 # Compiled source #
 ###################
 *.com
