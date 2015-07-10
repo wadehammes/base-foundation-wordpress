@@ -16,4 +16,6 @@
   "../../../../../../bower_components/foundation/scss/foundation/components/grid";
 
 //- Project
-@import "../project/global/all";
+@import "reset/sanitize";
+@import "project/global/all";
+@import "wordpress";

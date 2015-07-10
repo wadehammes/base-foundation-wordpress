@@ -42,7 +42,8 @@ $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
 // We use these to control various global styles
-$body-bg: #fff;
+$white: #ffffff;
+$body-bg: $white;
 $body-font-color: #222;
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $font-weight-normal:normal;

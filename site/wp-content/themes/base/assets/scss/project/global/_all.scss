@@ -5,9 +5,7 @@
 // A good use for this file is working on a project that has a style guide, build the styles
 // out here so you can rinse and reuse throughout the project.
 
-@import "variables";
+@import "base";
 @import "animations";
-@import "fontface";
 @import "forms";
 @import "buttons";
-@import "tools";
