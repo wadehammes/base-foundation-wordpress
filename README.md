@@ -78,7 +78,21 @@ $ bower update
 $ npm update
 ```
 
-Using this to build
+Launching Wordpress
 ===
+To get up and running, you will need to setup an environment using MAMP, <a href="https://www.mamp.info/en/">download it here</a>.
 
-All theme dev is done in the assets/ directory within the base theme.
+Once installed, point your MAMP to the <b>site/</b> directory, and then visit it in your browser at:
+```
+http://localhost:8888/
+```
+
+You will then be asked to start setting up your config files. At this point, you should use MAMP to acces your local databases (click the MySQL tab, and launch PHPMyAdmin, and create a new database), and fill out the respective information into the config setup.
+
+Once you are setup and logged in, upgrade Wordpress to the latest version, and then click Appearance -> Themes, and Activate the Base Joints theme. You should now see a bare website at the url above.
+
+Styling and Coding
+===
+All theme development is done in the <b>assets/</b> directory within the base theme.
+
+Make sure you have Gulp running (outlined above).
