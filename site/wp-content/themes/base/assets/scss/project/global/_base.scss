@@ -1,0 +1,11 @@
+body {
+  background-color: $body-bg;
+  color: $body-font-color;
+  font-family: $body-font-family;
+}
+
+img, object, embed, video, %object {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
