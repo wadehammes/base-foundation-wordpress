@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Async JS and CSS\n"
+"POT-Creation-Date: 2013-11-16 16:21+0100\n"
+"PO-Revision-Date: 2013-11-16 16:22+0100\n"
+"Last-Translator: Dima <dmikam@gmail.com>\n"
+"Language-Team: elCHAVALdelaWEB <dmikam@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../trunk/asyncJSandCSS.php:41
+msgid "Settings"
+msgstr "Configuración"
+
+#: ../trunk/settings_page.php:13
+msgid "Make donation"
+msgstr "Hacer donación"
+
+#: ../trunk/settings_page.php:14
+msgid "or Write Review"
+msgstr "o Escribir Reseña"
+
+#: ../trunk/settings_page.php:110
+msgid "Async JS and CSS settings"
+msgstr "Configuración de \"Async JS and CSS\""
+
+#: ../trunk/settings_page.php:116
+msgid "Load Javascript asynchronously"
+msgstr "Cargar Javascript de modo asíncrono"
+
+#: ../trunk/settings_page.php:123
+msgid "Detect &lt;script&gt; tags in wp_head"
+msgstr "Detectar los tags &lt;script&gt; en wp_head"
+
+#: ../trunk/settings_page.php:130
+msgid "Detect &lt;script&gt; tags in wp_footer"
+msgstr "Detectar los tags &lt;script&gt; en wp_footer"
+
+#: ../trunk/settings_page.php:137
+msgid "Load CSS asynchronously"
+msgstr "Cargar CSS de modo asíncrono"
+
+#: ../trunk/settings_page.php:144
+msgid "CSS loading method"
+msgstr "Método de carga de CSS"
+
+#: ../trunk/settings_page.php:151
+msgid "Minify CSS"
+msgstr "Minificar CSS"
+
+#: ../trunk/settings_page.php:158
+msgid "Remove \"?ver=XXX\" part from URLs"
+msgstr "Eliminar la parte \"?ver=XXX\" de las URLs"
+
+#: ../trunk/settings_page.php:165
+msgid "Exceptions (files to ignore and load in render-blocking way)"
+msgstr "Excepciones (archivos para ignorar e incluirlos en el modo estándar)"
+
+#: ../trunk/settings_page.php:182
+msgid ""
+"Here you can configure desired functionality of \"Async JS and CSS\" plugin."
+msgstr ""
+"Configura aquí la funcionalidad necesaria del plugin \"Async JS and CSS\""
+
+#: ../trunk/settings_page.php:200 ../trunk/settings_page.php:207
+msgid ""
+"If there is something broken after plugin activation, try to disable this "
+"option"
+msgstr ""
+"Si al activar el plugin algo se haya roto, intenta desactivar esta opción."
+
+#: ../trunk/settings_page.php:214
+msgid ""
+"Using <b>&lt;link rel='stylesheet' ...&gt;</b> tags on the foot of document"
+msgstr ""
+"Usando etiquetas <b>&lt;link rel='stylesheet' ...&gt;</b> en el pie del "
+"documento"
+
+#: ../trunk/settings_page.php:215
+msgid "Using <b>@import url(...)</b> css rules on the foot of document"
+msgstr "Usando regla <b>@import url(...)</b> en el pie del documento"
+
+#: ../trunk/settings_page.php:216
+msgid ""
+"Creating <b>&lt;link rel='stylesheet' ...&gt; tags using javascript</b> "
+"afted document loaded"
+msgstr ""
+"Creando etiquetas <b>&lt;link rel='stylesheet' ...&gt; usando javascript</b> "
+"cuando el documento se haya cargado por completo"
+
+#: ../trunk/settings_page.php:217
+msgid "Inserting all CSS styles <b>inline</b> into the document FOOTER"
+msgstr ""
+"Insertando todos estilos CSS de modo <b>inline</b> en el PIE de documento"
+
+#: ../trunk/settings_page.php:218
+msgid "(default)"
+msgstr "(por defecto)"
+
+#: ../trunk/settings_page.php:218
+msgid "Inserting all CSS styles <b>inline</b> into the document HEADER"
+msgstr ""
+"Insertando todos estilos CSS de modo <b>inline</b> en la CABEVERA de "
+"documento"
+
+#: ../trunk/settings_page.php:255
+msgid ""
+"You can use script/style name (aka \"jquery\") or part of script/style URL "
+"(like \"-min.js\").<br />One by line, please :)"
+msgstr ""
+"Puedes usar los nombres registrados de los escripts/estilos (p.ej. \"jquery"
+"\") o parte de la URL (como \"-min.js\"). Una por línea, por favor."

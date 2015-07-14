@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Async JS and CSS\n"
+"POT-Creation-Date: 2013-11-16 16:22+0100\n"
+"PO-Revision-Date: 2013-11-16 16:23+0100\n"
+"Last-Translator: Dima <dmikam@gmail.com>\n"
+"Language-Team: elCHAVALdelaWEB <dmikam@gmail.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../trunk/asyncJSandCSS.php:41
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../trunk/settings_page.php:13
+msgid "Make donation"
+msgstr "Сделать пожертвование"
+
+#: ../trunk/settings_page.php:14
+msgid "or Write Review"
+msgstr "или Написать Отзыв"
+
+#: ../trunk/settings_page.php:110
+msgid "Async JS and CSS settings"
+msgstr "Настройки Async JS and CSS"
+
+#: ../trunk/settings_page.php:116
+msgid "Load Javascript asynchronously"
+msgstr "Загружать Javascript асинхронно"
+
+#: ../trunk/settings_page.php:123
+msgid "Detect &lt;script&gt; tags in wp_head"
+msgstr "Обнаруживать &lt;script&gt; тэги в wp_head"
+
+#: ../trunk/settings_page.php:130
+msgid "Detect &lt;script&gt; tags in wp_footer"
+msgstr "Обнаруживать &lt;script&gt; тэги в wp_footer"
+
+#: ../trunk/settings_page.php:137
+msgid "Load CSS asynchronously"
+msgstr "Загружать CSS асинхронно"
+
+#: ../trunk/settings_page.php:144
+msgid "CSS loading method"
+msgstr "Метод загрузки CSS"
+
+#: ../trunk/settings_page.php:151
+msgid "Minify CSS"
+msgstr "Минифицировать CSS"
+
+#: ../trunk/settings_page.php:158
+msgid "Remove \"?ver=XXX\" part from URLs"
+msgstr "Удалять окончание \"?ver=XXX\"  из путей"
+
+#: ../trunk/settings_page.php:165
+msgid "Exceptions (files to ignore and load in render-blocking way)"
+msgstr ""
+"Исключения (игнорировать эти файлы и загружать их стандартным синхронным/"
+"блокирующим способом)"
+
+#: ../trunk/settings_page.php:182
+msgid ""
+"Here you can configure desired functionality of \"Async JS and CSS\" plugin."
+msgstr "Настроить желаемый функционал \"Async JS and CSS\"."
+
+#: ../trunk/settings_page.php:200 ../trunk/settings_page.php:207
+msgid ""
+"If there is something broken after plugin activation, try to disable this "
+"option"
+msgstr ""
+"Если после активации плугина что-то перестало работать, попробуйте отключить "
+"эту опцию"
+
+#: ../trunk/settings_page.php:214
+msgid ""
+"Using <b>&lt;link rel='stylesheet' ...&gt;</b> tags on the foot of document"
+msgstr ""
+"Используя <b>&lt;link rel='stylesheet' ...&gt;</b> тэги в конце документа"
+
+#: ../trunk/settings_page.php:215
+msgid "Using <b>@import url(...)</b> css rules on the foot of document"
+msgstr "Используя выражение CSS <b>@import url(...)</b> в конце документа"
+
+#: ../trunk/settings_page.php:216
+msgid ""
+"Creating <b>&lt;link rel='stylesheet' ...&gt; tags using javascript</b> "
+"afted document loaded"
+msgstr ""
+"Создавая тэги <b>&lt;link rel='stylesheet' ...&gt; используя javascript</b> "
+"после полной загрузки документа"
+
+#: ../trunk/settings_page.php:217
+msgid "Inserting all CSS styles <b>inline</b> into the document FOOTER"
+msgstr "Вставить все стили CSS (<b>inline</b>) в контекст В КОНЕЦ документа"
+
+#: ../trunk/settings_page.php:218
+msgid "(default)"
+msgstr "(по-умолчанию)"
+
+#: ../trunk/settings_page.php:218
+msgid "Inserting all CSS styles <b>inline</b> into the document HEADER"
+msgstr "Вставить все стили CSS (<b>inline</b>) в контекст в В НАЧАЛО документа"
+
+#: ../trunk/settings_page.php:255
+msgid ""
+"You can use script/style name (aka \"jquery\") or part of script/style URL "
+"(like \"-min.js\").<br />One by line, please :)"
+msgstr ""
+"Вы можете использовать зарегистрированное имя скрипта/стиля (например "
+"\"jquery\") или часть пути URL скрипта/стиля (например \"-min.js\").<br /> "
+"Одно исключение в строке, пожалуйста :)"
