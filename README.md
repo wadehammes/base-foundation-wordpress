@@ -31,21 +31,11 @@ $ cp -i base-foundation-wordpress /your/project/directory/
 
 Install the Node Modules into the project:
 ```
-$ npm install -g gulp
 $ npm install
 ```
 
 <b>NOTE: if you get an error about node-sass not being installed, take a look at this Stack Overflow (and the answer):</b>
 <a href="http://stackoverflow.com/questions/29461831/libsass-bindings-not-found-when-using-node-sass-in-nodejs">http://stackoverflow.com/questions/29461831/libsass-bindings-not-found-when-using-node-sass-in-nodejs</a>
-
-```
-$ npm rebuild
-```
-
-Install the Bower dependencies into the project:
-```
-$ bower install
-```
 
 Install the Bourbon library into the theme directory project:
 ```
@@ -73,9 +63,14 @@ $ gulp images
 
 ##### In order to update packages:
 ```
-$ bourbon update
+$ cd wp-content/themes/base/ bourbon update
 $ bower update
 $ npm update
+```
+
+##### To fix breaking NPM builds
+```
+$ npm rebuild
 ```
 
 Launching Wordpress
